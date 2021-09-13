@@ -1,6 +1,23 @@
+@font-face {
+  font-family: "pokemon-font";
+  src: url("../fonts/pokemon-font.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/pokemon-font.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/pokemon-font.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/pokemon-font.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/pokemon-font.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  /* There is no SVG version of this font due to support being dropped in SVG 2 */
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(/public/images/45634.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ff1008;
+  font-size: 10px;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  font-family: "pokemon-font", monospace;
 }
 
 a {
@@ -9,4 +26,13 @@ a {
 
 h1 {
   color: 15px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fafeff;
+  background-color: #ff1008;
+  font-size: 25px;
+}
+
+.container-fluid {
+  background-color: #ff1008;
 }
