@@ -19,7 +19,7 @@ router.get('/cards',(req, res)=>{
 })
 
 router.post("/add-favorite", isLoggedIn ,(req, res) =>{
-const query = { name, status, species, gender, image, apiId } = req.body
+const query = { name, supertype, subtypes, level, image, evolvesForm, abilities, atacks} = req.body
 const idToCheck = req.body.apiId;
     Card.find({apiId: idToCheck})
 	.then (cardArray => {
