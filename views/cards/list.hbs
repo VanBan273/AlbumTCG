@@ -1,0 +1,31 @@
+<div class='container'>
+  <h1>Cards list</h1>
+
+  <div class='row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5'>
+  {{!-- image name status --}}
+    {{#each cards.data}}
+    <div class='col'>
+      <div class='card shadow-sm'>
+        <img src="{{images.small}}" alt="">
+        <p>{{name}}</p>
+        <p>{{status}}</p>
+        <form action = "/add-favorite" method="POST">
+          
+          <input type="hidden" name="name" value={{name}}>
+          <input type="hidden" name="supertype" value={{supertype}}>
+          <input type="hidden" name="subtypes" value={{subtypes}}>
+          <input type="hidden" name="level" value={{level}}>
+          <input type="hidden" name="hp" value={{hp}}>
+          <input type="hidden" name="types" value={{types}}>
+          <input type="hidden" name="evolvesForm" value={{evolvesForm}}>
+          <input type="hidden" name="abilities" value={{abilities}}>
+          <input type="hidden" name="atacks" value={{atacks}}>
+          <input type="hidden" name="images" value={{images}}>
+
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+    {{/each}}    
+  </div>
+</div>
