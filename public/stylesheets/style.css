@@ -18,6 +18,8 @@ body {
   font-smooth: never;
   -webkit-font-smoothing: none;
   font-family: "pokemon-font", monospace;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
@@ -47,7 +49,7 @@ h1 {
 /* FOOTER GENERIC */
 
 footer {
-  background-color: #ffffff;
+  background-color: transparent;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -66,17 +68,78 @@ footer p {
   position: relative;
 }
 
-#signup {
-  display: flex;
-  justify-content: end;
-}
 .card {
   background-color: transparent;
   border: 2px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 #delete {
   font-size: 20px;
   border: 3px solid black;
   border-radius: 20px;
+}
+
+#add {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 33.33%;
+}
+
+#pcards {
+  width: 35vh;
+}
+
+.index {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border: white solid 5px;
+  margin-top: 20vh;
+  color: #fff;
+  display: flex;
+
+  width: 40vw;
+}
+.index .row {
+  width: 40vw;
+}
+
+.index .content {
+  padding: 10% 0;
+}
+
+.btn-index {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.p {
+  font-size: 50px;
+  color: #00b7ff;
+}
+
+.signup {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border: white solid 5px;
+  margin-top: 50vh;
+  color: #fff;
+  display: flex;
+  -ms-flex-direction: column;
+}
+
+#border {
+  border: 2px solid rgb(0, 0, 0);
 }

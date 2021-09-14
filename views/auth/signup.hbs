@@ -1,3 +1,4 @@
+<div class="container sing"></div>
 <form action="/auth/signup" method="POST">
    <label> Username
       <input type="text" name="username">
@@ -11,4 +12,20 @@
 
 {{#if errorMessage}}
 <p class="error">{{errorMessage}}</p>
-{{/if}}
+{{/if}}<div class="container index">
+  <div class="row index-row justify-content-center align-items-center">
+    <div class="content">
+      <h2 class="card-title">Welcome Treainer</h2>
+      <h1 class="card-subtitle">Complete your collection</h1>
+      
+      <div class="btn-index">
+        <a href="/auth/login" class="btn btn-light">Login</a>
+        <a href="/auth/signup" class="btn btn-light">Signup</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>

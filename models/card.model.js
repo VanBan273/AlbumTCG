@@ -4,16 +4,8 @@ const { Schema, model } = require("mongoose");
 const cardSchema = new Schema(
   {
     name: String,
-    supertype: String,
-    subtypes: [String],
-    level: Number,
-    hp: Number,
-    types: [String],
-    evolvesForm: String,
-    abilities:[String],
-    atacks:[String],
     images:String,
-
+    apiId:String,
 
   },
   {

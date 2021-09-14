@@ -1,15 +1,18 @@
+<div class= "container">
 <h1>Welcome Trainer {{user.username}}</h1>
-{{#each user.favorites}}
-<img src={{images.small}} alt={{images}}>
-<p>{{name}}</p>
-<form action = "/delete-favorite" method="POST">
-    <input type="hidden" name="id" value={{_id}}>
-    
-    
 
+    <div class="row">
+  {{#each user.favorites}}
 
+  <div class= "col-4" id="pcards">
+    <img id= "border" src={{images}} alt={{images}} />
 
+    <form action="/delete-favorite" method="POST">
+      <input type="hidden" name="id" value={{_id}} />
 
-<button type="submit" Id="delete">Delete</button>
-</form>
-{{/each}}
+      <button type="submit" Id="delete">Delete</button>
+    </form>
+    </div>
+  {{/each}}
+</div>
+</div>

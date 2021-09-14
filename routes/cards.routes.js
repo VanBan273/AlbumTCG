@@ -10,7 +10,7 @@ router.get('/cards',(req, res)=>{
     console.log("entro a cards")
     CardsAPI.getAllCards()
     .then(allCards =>
-       res.render("cards/list", {cards: allCards.data}) 
+     res.render("cards/list", {cards: allCards.data}) 
      //res.send(allCards.data)
     )
     
@@ -19,19 +19,25 @@ router.get('/cards',(req, res)=>{
 })
 
 router.post("/add-favorite", isLoggedIn ,(req, res) =>{
-const query = { name, supertype, subtypes, level, image, evolvesForm, abilities, atacks} = req.body
+const query = { name, image, } = req.body
 const idToCheck = req.body.apiId;
+
+console.log(idToCheck)
     Card.find({apiId: idToCheck})
 	.then (cardArray => {
+
+        
 		//comprobar si ese apiId ya esta en db cards
 		if (cardArray.length === 0) {
             Card
                 .create(query)
                 .then(result => {
+                    console.log(result)
                   User
                     .findByIdAndUpdate(req.user._id,{$push : {favorites : result._id}})
                     .then(()=>{
                         res.redirect("/cards")
+                        return
                     })
                 })
                 .catch(err => console.log(err))
