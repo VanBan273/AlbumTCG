@@ -35,4 +35,4 @@ cardSchema.pre("save", function(next) {
 
 // const Character = model("Character", userSchema);
 
-module.exports = model("Cards", cardSchema);
+module.exports = model("Card", cardSchema);

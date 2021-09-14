@@ -10,10 +10,10 @@
 }
 
 body {
-  background-image: url(/public/images/45634.png);
+  background-image: url(../images/45634.png);
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ff1008;
+  color: #ffffff;
   font-size: 10px;
   font-smooth: never;
   -webkit-font-smoothing: none;
@@ -35,4 +35,48 @@ h1 {
 
 .container-fluid {
   background-color: #ff1008;
+}
+
+.error {
+  color: red;
+}
+.d-flex {
+  background-color: #fafeff;
+}
+
+/* FOOTER GENERIC */
+
+footer {
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+}
+
+footer p {
+  color: #000000;
+  padding-top: 1%;
+  padding-left: 1%;
+}
+
+#navbarSupportedContent {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+#signup {
+  display: flex;
+  justify-content: end;
+}
+.card {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+#delete {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
 }
