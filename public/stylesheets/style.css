@@ -70,31 +70,10 @@ footer p {
 }
 
 .card {
-  background-color: transparent;
+  background-color: white;
   border: 2px solid black;
   display: flex;
   justify-content: center;
-}
-
-#delete {
-  font-size: 20px;
-  border: 3px solid black;
-  border-radius: 20px;
-}
-
-#add {
-  font-size: 20px;
-  border: 3px solid black;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  padding-left: 100px;
-  padding-right: 100px;
-  width: 33.33%;
-}
-
-#pcards {
-  width: 35vh;
 }
 
 .index {
@@ -124,11 +103,9 @@ footer p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.p {
-  font-size: 50px;
-  color: #00b7ff;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 10px;
 }
 
 #border {
@@ -145,4 +122,112 @@ label {
 
 .navbar-brand {
   font-size: 25px;
+}
+
+#cuadro {
+  padding-left: 180px;
+}
+
+#submit {
+  font-size: 20px;
+  color: #fafeff;
+  margin-top: 5px;
+  margin-left: 150px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 0, 0),
+    rgb(0, 0, 0) 50%,
+    rgb(255, 255, 255)
+  );
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
+}
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+h3 {
+  text-align: center;
+  font-size: 50px;
+  border: 5px solid black;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 119, 255),
+    rgb(0, 0, 0) 50%,
+    rgb(255, 255, 255)
+  );
+}
+
+.btn-light {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 0, 0),
+    rgb(0, 0, 0) 50%,
+    rgb(255, 255, 255)
+  );
+  color: #fafeff;
+}
+
+#add {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 33.33%;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 119, 255),
+    rgb(0, 0, 0) 50%,
+    rgb(255, 255, 255)
+  );
+  color: #fafeff;
+  margin-left: 100px;
+  margin-top: -25px;
+}
+#delete {
+  font-size: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 33.33%;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 119, 255),
+    rgb(0, 0, 0) 50%,
+    rgb(255, 255, 255)
+  );
+  color: #fafeff;
+  margin-left: 100px;
+  margin-top: -25px;
+}
+
+p {
+  font-size: 25px;
+  color: #000000;
+  text-align: center;
+}
+
+.profcards {
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+#pcards {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }

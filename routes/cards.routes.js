@@ -7,16 +7,25 @@ const Api = require("../services/ApiHandler");
 const CardsAPI = new Api()
 
 router.get('/cards',(req, res)=>{
-    console.log("entro a cards")
+    
     CardsAPI.getAllCards()
     .then(allCards =>
      res.render("cards/list", {cards: allCards.data}) 
      //res.send(allCards.data)
     )
-    
-
-    
+     
 })
+
+router.get("/busqueda",(req,res) =>{
+    //console.log(req.query.search)
+    CardsAPI.getCardByName(req.query.search)
+    .then(Card =>{
+     res.render("cards/list", {cards: Card.data})
+    });
+})
+CardsAPI.getCardByName()
+
+
 
 router.post("/add-favorite", isLoggedIn ,(req, res) =>{
 const query = { name, image, } = req.body
@@ -79,5 +88,7 @@ router.post("/delete-favorite",isLoggedIn,(req,res)=>{
 { field: { $nin: [ value1, value2, ..... , valueN ] } }
 { field: { $all: [ value1, value2, ..... , valueN ] } }
  */
+
+
 
 module.exports = router;
