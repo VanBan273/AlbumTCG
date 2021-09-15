@@ -1,19 +1,16 @@
 <div class="container">
   <h3><b>Cards list</b></h3>
 
-  <div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5">
-    {{! image name status }}
+  <div class="row">
     {{#each cards.data}}
-      <div class="col">
+      <div class="col-4">
         <div class="card shadow-sm">
           <img src="{{images.small}}" alt="" />
           <p><b>{{name}}</b></p>
           <p>{{status}}</p>
           <form action="/add-favorite" method="POST">
             <input type="hidden" name="apiId" value="{{id}}" />
-
             <input type="hidden" name="images" value="{{images.small}}" />
-
             <button type="submit" Id="add">Add</button>
           </form>
         </div>

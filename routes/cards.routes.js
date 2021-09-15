@@ -16,14 +16,7 @@ router.get('/cards',(req, res)=>{
      
 })
 
-router.get("/busqueda",(req,res) =>{
-    //console.log(req.query.search)
-    CardsAPI.getCardByName(req.query.search)
-    .then(Card =>{
-     res.render("cards/list", {cards: Card.data})
-    });
-})
-CardsAPI.getCardByName()
+
 
 
 
@@ -89,6 +82,13 @@ router.post("/delete-favorite",isLoggedIn,(req,res)=>{
 { field: { $all: [ value1, value2, ..... , valueN ] } }
  */
 
-
+router.get("/busqueda",(req,res) =>{
+    //console.log(req.query.search)
+    CardsAPI.getCardByName(req.query.search)
+    .then(Card =>{
+     res.render("cards/list", {cards: Card.data})
+    });
+})
+CardsAPI.getCardByName()
 
 module.exports = router;
