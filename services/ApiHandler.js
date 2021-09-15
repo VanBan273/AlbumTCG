@@ -7,9 +7,10 @@ class CardsApi {
     });
   }
 
-  getAllCards = () => this.api.get('/cards');
+  getAllCards = () => this.api.get('/cards?pageSize=84');
 
 }
+
 
 
 module.exports = CardsApi;

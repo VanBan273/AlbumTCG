@@ -52,7 +52,7 @@ module.exports = (app) => {
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: "mongodb://localhost/ironlauncherBootstrap"
+      mongoUrl: process.env.DB_REMOTE,
     }),
   })
 );

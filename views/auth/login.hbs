@@ -1,4 +1,14 @@
-<form action="/auth/login" method="POST">
+
+{{#if errorMessage}}
+<p class="error">{{errorMessage}}</p>
+{{/if}}
+
+<div class="container index">
+  <div class="row index-row justify-content-center align-items-center">
+    <div class="content">
+      <h2 class="card-title">Welcome back Treainer</h2>
+
+      <form action="/auth/login" method="POST">
    <label> Username
       <input type="text" name="username">
    </label>
@@ -8,7 +18,4 @@
 
    <button type="submit">Submit</button>
 </form>
-
-{{#if errorMessage}}
-<p class="error">{{errorMessage}}</p>
-{{/if}}
+      
