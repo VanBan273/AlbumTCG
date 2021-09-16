@@ -10,6 +10,11 @@ const CardsAPI = new Api()
 
 router.get('/cards',(req, res)=>{
     
+/*if(req.query.page){
+    page = req.query.page   (para loas paginas)
+}*/
+
+
     CardsAPI.getAllCards()
     .then(allCards =>
      res.render("cards/list", {cards: allCards.data}) 
