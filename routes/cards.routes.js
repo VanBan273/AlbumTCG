@@ -2,22 +2,31 @@ const router = require("express").Router();
 resolve = require('path').resolve
 
 
+const { parse } = require("path");
 const isLoggedIn = require("../middleware/isLoggedIn");
 const Card = require(("../models/Cards.model.js"));
 const User = require("../models/User.model");
 const Api = require("../services/ApiHandler");
 const CardsAPI = new Api()
 
+
+
 router.get('/cards',(req, res)=>{
     
-/*if(req.query.page){
-    page = req.query.page   (para loas paginas)
-}*/
 
+let num = 1;
 
-    CardsAPI.getAllCards()
+if(req.query.num){
+    num = req.query.num
+}
+let nextPage = parseInt(num) + 1;
+let prevPage = parseInt(num) - 1;
+//let numGreaterThanOne = parseInt(num) < 1;
+
+    CardsAPI.getAllCards(num)
+   
     .then(allCards =>
-     res.render("cards/list", {cards: allCards.data}) 
+     res.render("cards/list", {cards: allCards.data, nextPage, prevPage}) 
      //res.send(allCards.data)
     )
      

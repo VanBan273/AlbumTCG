@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: #00b7ff;
+  color: #000000;
 }
 
 h1 {
@@ -248,4 +248,11 @@ h3 {
 #buttomsearch:hover {
   background-color: white;
   color: black;
+}
+
+#pages {
+  margin: 20px 20px 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "pokemon-font";
 }
