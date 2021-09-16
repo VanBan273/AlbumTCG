@@ -4,7 +4,14 @@ const User = require("../models/User.model");
   
   // /* GET home page */
   router.get("/", (req, res, next) => {
-   res.render("index");
+    let user
+    if(req.session.user){
+      user = true
+    }else{
+      user = false
+    }
+   res.render("index", {user});
+
  });
 
 
