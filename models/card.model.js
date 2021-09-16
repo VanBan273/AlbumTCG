@@ -14,15 +14,7 @@ const cardSchema = new Schema(
 );
 
 
-cardSchema.pre("save", function(next) {
-  // console.log(this)
 
-  const nameToUpper = this.name.split(' ').map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(' ')
-
-  this.name = nameToUpper
-
-    next();
-});
 
 
 // const Character = model("Character", userSchema);

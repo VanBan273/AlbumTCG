@@ -7,7 +7,7 @@ class CardsApi {
     });
   }
 
-  getAllCards = () => this.api.get('/cards?pageSize=250');
+  getAllCards = () => this.api.get('/cards?pageSize=48&page=6');
   getCardByName= (nameParam) => this.api.get(`/cards?q=name:${nameParam}`)
 
 }
