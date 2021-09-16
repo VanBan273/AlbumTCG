@@ -1,7 +1,9 @@
 const router = require("express").Router();
+resolve = require('path').resolve
+
 
 const isLoggedIn = require("../middleware/isLoggedIn");
-const Card = require("../models/Card.model");
+const Card = require(resolve("../AlbumTCG/models/Card.model"));
 const User = require("../models/User.model");
 const Api = require("../services/ApiHandler");
 const CardsAPI = new Api()
