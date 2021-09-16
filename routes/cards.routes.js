@@ -3,7 +3,7 @@ resolve = require('path').resolve
 
 
 const isLoggedIn = require("../middleware/isLoggedIn");
-const Card = require(("../models/Card.model.js"));
+const Card = require(("../models/Cards.model.js"));
 const User = require("../models/User.model");
 const Api = require("../services/ApiHandler");
 const CardsAPI = new Api()
