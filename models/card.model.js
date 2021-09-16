@@ -17,6 +17,6 @@ const cardSchema = new Schema(
 
 
 
-// const Character = model("Character", userSchema);
+ const Card = model("Card", cardSchema);
 
-module.exports = model("Card", cardSchema);
+module.exports = Card
