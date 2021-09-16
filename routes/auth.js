@@ -39,7 +39,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
   
   const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
   if (!regex.test(password)) {
-    return res.status(400).render("signup", {
+    return res.status(400).render("auth/signup", {
       errorMessage:
         "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
     });
@@ -138,7 +138,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       // in this case we are sending the error handling to the error handling middleware that is defined in the error handling file
       // you can just as easily run the res.status that is commented out below
       next(err);
-      return res.status(500).render("login", { errorMessage: err.message });
+      return res.status(500).render("auth/login", { errorMessage: err.message });
     });
 });
 
