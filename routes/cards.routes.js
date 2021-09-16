@@ -3,7 +3,7 @@ resolve = require('path').resolve
 
 
 const isLoggedIn = require("../middleware/isLoggedIn");
-const Card = require(resolve("./models/Card.model.js"));
+//const Card = require(resolve("./models/Card.model.js"));
 const User = require("../models/User.model");
 const Api = require("../services/ApiHandler");
 const CardsAPI = new Api()
@@ -22,7 +22,7 @@ router.get('/cards',(req, res)=>{
 
 
 
-router.post("/add-favorite", isLoggedIn ,(req, res) =>{
+/*router.post("/add-favorite", isLoggedIn ,(req, res) =>{
 const query = { name, image, } = req.body
 const idToCheck = req.body.apiId;
 
@@ -65,7 +65,7 @@ console.log(idToCheck)
             
 		}
 	}) 
-})
+})*/
 
 
 router.post("/delete-favorite",isLoggedIn,(req,res)=>{
