@@ -52,13 +52,13 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
-                <li><a class="nav-link" href="/profile"
+                <li><a class="nav-link  dropdown-item" href="/profile"
                 >My cards</a></li>
                 
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#"> <li class="dropdown-item">
+                <li>
               <a
-                class="nav-link"
+                class="nav-link dropdown-item" 
                 href="/auth/logout"
                 tabindex="-1"
                 aria-disabled="true"
@@ -76,9 +76,9 @@
             </li>
           </ul>
           <image src="/images/25.png" id="image"></image>
-          <form class="d-flex" action="/busqueda" method="GET">
+          <form class="d-flex" action="/busqueda" method="GET" id="busqueda">
             <input 
-              id="busqueda"
+            id="noborder"
               class="form-control me-2"
               name="search"
               type="search"
@@ -86,7 +86,8 @@
               aria-label="Search"
             />
             <button
-              class="btn btn-outline-success"
+            id="buttomsearch"
+              class="btn btn-dark"
               type="submit"
             >Search</button>
           </form>

@@ -32,8 +32,8 @@ h1 {
   text-shadow: 2px 2px 0 #aaa, 12px 12px 8px rgb(255, 238, 0);
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #fafeff;
-  background-color: #ff1008;
+  color: #000000;
+
   font-size: 25px;
 }
 
@@ -43,9 +43,6 @@ h1 {
 
 .error {
   color: red;
-}
-.d-flex {
-  background-color: #fafeff;
 }
 
 /* FOOTER GENERIC */
@@ -231,4 +228,21 @@ h3 {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+}
+
+#busqueda {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+#noborder {
+  border: 0px;
+}
+
+#buttomsearch {
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+#buttomsearch:hover {
+  background-color: white;
+  color: black;
 }
