@@ -27,7 +27,7 @@ a {
 }
 
 h1 {
-  color:black;
+  color: black;
   font-size: 10px;
 }
 .navbar-light .navbar-nav .nav-link {
@@ -51,7 +51,7 @@ h1 {
 
 footer {
   background-color: transparent;
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: end;
   margin-top: 1em;
@@ -234,10 +234,4 @@ p {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  
 }
-
-
-
-
-j
