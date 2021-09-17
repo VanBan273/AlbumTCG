@@ -249,10 +249,28 @@ h3 {
   background-color: white;
   color: black;
 }
-
-#pages {
+#buttonNP {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+#next {
   margin: 20px 20px 40px 20px;
   display: flex;
   justify-content: space-around;
-  font-family: "pokemon-font";
+  background-image: url(../images/next.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position-x: center;
+  color: transparent;
+}
+#prev {
+  margin: 20px 20px 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(../images/prev.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position-x: center;
+  color: transparent;
 }
