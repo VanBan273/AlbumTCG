@@ -21,12 +21,12 @@ if(req.query.num){
 }
 let nextPage = parseInt(num) + 1;
 let prevPage = parseInt(num) - 1;
-//let numGreaterThanOne = parseInt(num) < 1;
+let numGreaterThanOne = parseInt(num) > 1;
 
     CardsAPI.getAllCards(num)
    
     .then(allCards =>
-     res.render("cards/list", {cards: allCards.data, nextPage, prevPage}) 
+     res.render("cards/list", {cards: allCards.data, nextPage, prevPage,numGreaterThanOne}) 
      //res.send(allCards.data)
     )
      
@@ -54,7 +54,7 @@ console.log(idToCheck)
                   User
                     .findByIdAndUpdate(req.user._id,{$push : {favorites : result._id}})
                     .then(()=>{
-                        res.redirect("/cards")
+                        res.redirect("/profile")
                         return
                     })
                 })
@@ -67,7 +67,7 @@ console.log(idToCheck)
                     User
                     .findByIdAndUpdate(req.user._id,{$push : {favorites : cardArray[0]._id}})
                     .then(()=>{
-                        res.redirect("/cards")
+                        res.redirect("/profile")
                     })
                 }else{res.redirect("/cards")}
             })

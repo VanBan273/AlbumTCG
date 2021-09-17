@@ -20,10 +20,10 @@
   </div>
 </div>
 <div id="buttonNP">
- {{!--  {{#if numGreaterThanOne}} --}}
+ {{#if numGreaterThanOne}} 
     <a class="btn btn-ligth" id="prev" href="/cards?num={{prevPage}}">prev</a>
     <a class="btn btn-ligth" id="next" href="/cards?num={{nextPage}}">next</a>
-   {{!--  {{else}}
-    <a class="btn btn-ligth" href="/cards?num={{nextPage}}">next</a>
-    {{/if}}--}}
+    {{else}}
+    <a class="btn btn-ligth" id="next" href="/cards?num={{nextPage}}">next</a>
+    {{/if}}
     </div> 
