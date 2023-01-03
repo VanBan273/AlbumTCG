@@ -18,8 +18,6 @@ router.get("/signup", isLoggedOut, (req, res) => {
   res.render("auth/signup");
 });
 
-
-
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, password } = req.body;
 
@@ -29,22 +27,21 @@ router.post("/signup", isLoggedOut, (req, res) => {
       .render("auth/signup", { errorMessage: "Please provide your username." });
   }
 
-  if (password.length < 8) {
+  if (password.length < 6) {
     return res.status(400).render("auth/signup", {
-      errorMessage: "Your password needs to be at least 8 characters long.",
+      errorMessage: "Your password needs to be at least 6 characters long.",
     });
   }
 
   //  ! This use case is using a regular expression to control for special characters and min length
-  
+
   /*const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
   if (!regex.test(password)) {
     return res.status(400).render("auth/signup", {
       errorMessage:
-        "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
+        "Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.",
     });
   }*/
-  
 
   // Search the database for a user with the username submitted in the form
   User.findOne({ username }).then((found) => {
@@ -138,7 +135,9 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       // in this case we are sending the error handling to the error handling middleware that is defined in the error handling file
       // you can just as easily run the res.status that is commented out below
       next(err);
-      return res.status(500).render("auth/login", { errorMessage: err.message });
+      return res
+        .status(500)
+        .render("auth/login", { errorMessage: err.message });
     });
 });
 
