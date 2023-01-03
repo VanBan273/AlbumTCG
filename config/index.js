@@ -23,8 +23,7 @@ const session = require("express-session");
 
 // ℹ️ MongoStore in order to save the user session in the database
 // https://www.npmjs.com/package/connect-mongo
-const MongoStore = require("connect-mongo");
-
+const MongoStore = require("connect-mongo").default;
 
 // Middleware configuration
 module.exports = (app) => {
@@ -44,18 +43,17 @@ module.exports = (app) => {
   app.use(express.static(path.join(__dirname, "..", "public")));
 
   // Handles access to the favicon
-  app.use(favicon(path.join(__dirname, "..", "public", "images", "favicon.ico")));
-   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
- app.use(
-  session({
-    secret: process.env.SESSION_SECRET || "super hyper secret key",
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-      mongoUrl: process.env.DB_REMOTE,
-    }),
-  })
-);
+  app.use(
+    favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
+  );
+  // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET || "super hyper secret key",
+      resave: false,
+      saveUninitialized: false,
+    })
+  );
 };
 
 //jaja
